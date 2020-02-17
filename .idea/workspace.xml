@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="986f7f92-75e9-4c8a-af2e-ed22b68caca3" name="Default Changelist" comment="feat(控制层、视图层): 项目骨架、版本控制&#10;&#10;1、收集合适的前端页面，实现默认显示欢迎页面，跳转博客首页、登录页、注册页&#10;2、实现版本控制">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="986f7f92-75e9-4c8a-af2e-ed22b68caca3" name="Default Changelist" comment="feat(控制层、视图层): 项目骨架、版本控制&#10;&#10;1、收集合适的前端页面，实现默认显示欢迎页面，跳转博客首页、登录页、注册页&#10;2、实现版本控制" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +17,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -112,6 +111,7 @@
       <workItem from="1581903033825" duration="77000" />
       <workItem from="1581903128256" duration="6993000" />
       <workItem from="1581922294029" duration="109000" />
+      <workItem from="1581926198714" duration="453000" />
     </task>
     <task id="LOCAL-00001" summary="feat(控制层、视图层): 项目骨架、版本控制&#10;&#10;1、收集合适的前端页面，实现默认显示欢迎页面，跳转博客首页、登录页、注册页&#10;2、实现版本控制">
       <created>1581909470699</created>
@@ -151,10 +151,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="91" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1581854090832" />
-    <state x="147" y="0" key="CommitChangelistDialog2" timestamp="1581922108980">
+    <state x="147" y="0" key="CommitChangelistDialog2" timestamp="1581926660616">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="147" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1581922108980" />
+    <state x="147" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1581926660616" />
     <state x="421" y="99" key="FileChooserDialogImpl" timestamp="1581922395347">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -199,18 +199,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="144" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1581903110183" />
-    <state x="287" y="104" width="761" height="539" key="Vcs.Push.Dialog.v2" timestamp="1581922067874">
+    <state x="287" y="104" width="761" height="539" key="Vcs.Push.Dialog.v2" timestamp="1581926788583">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="287" y="104" width="761" height="539" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1581922067874" />
+    <state x="287" y="104" width="761" height="539" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1581926788583" />
     <state x="337" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1581922294074">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="337" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1581922294074" />
-    <state x="350" y="143" key="git4idea.merge.GitPullDialog" timestamp="1581922019454">
+    <state x="439" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581926767800">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="350" y="143" key="git4idea.merge.GitPullDialog/0.0.1280.680@0.0.1280.680" timestamp="1581922019454" />
+    <state x="439" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1581926767800" />
+    <state x="350" y="143" key="git4idea.merge.GitPullDialog" timestamp="1581926691789">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="350" y="143" key="git4idea.merge.GitPullDialog/0.0.1280.680@0.0.1280.680" timestamp="1581926691789" />
     <state x="438" y="220" key="git4idea.rebase.GitRebaseDialog" timestamp="1581914293529">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
