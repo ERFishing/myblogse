@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="986f7f92-75e9-4c8a-af2e-ed22b68caca3" name="Default Changelist" comment="">
+    <list default="true" id="986f7f92-75e9-4c8a-af2e-ed22b68caca3" name="Default Changelist" comment="feat(控制层、视图层): 项目骨架、版本控制&#10;&#10;1、收集合适的前端页面，实现默认显示欢迎页面，跳转博客首页、登录页、注册页&#10;2、实现版本控制">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -110,7 +110,7 @@
       <workItem from="1581844275093" duration="7212000" />
       <workItem from="1581901778275" duration="1223000" />
       <workItem from="1581903033825" duration="77000" />
-      <workItem from="1581903128256" duration="4017000" />
+      <workItem from="1581903128256" duration="6297000" />
     </task>
     <task id="LOCAL-00001" summary="feat(控制层、视图层): 项目骨架、版本控制&#10;&#10;1、收集合适的前端页面，实现默认显示欢迎页面，跳转博客首页、登录页、注册页&#10;2、实现版本控制">
       <created>1581909470699</created>
@@ -119,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581909470699</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat(控制层、视图层): 项目骨架、版本控制&#10;&#10;1、收集合适的前端页面，实现默认显示欢迎页面，跳转博客首页、登录页、注册页&#10;2、实现版本控制">
+      <created>1581913330115</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1581913330115</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,14 +143,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="91" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1581854090832" />
-    <state x="147" y="0" key="CommitChangelistDialog2" timestamp="1581909424391">
+    <state x="147" y="0" key="CommitChangelistDialog2" timestamp="1581921298886">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="147" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1581909424391" />
-    <state x="421" y="99" key="FileChooserDialogImpl" timestamp="1581902129356">
+    <state x="147" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1581921298886" />
+    <state x="421" y="99" key="FileChooserDialogImpl" timestamp="1581921448125">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="99" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1581902129356" />
+    <state x="421" y="99" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1581921448125" />
     <state width="1281" height="175" key="GridCell.Tab.0.bottom" timestamp="1581856440412">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -184,10 +191,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="144" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1581903110183" />
-    <state x="287" y="104" width="814" height="539" key="Vcs.Push.Dialog.v2" timestamp="1581913210009">
+    <state x="287" y="104" width="814" height="539" key="Vcs.Push.Dialog.v2" timestamp="1581921181021">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="287" y="104" width="814" height="539" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1581913210009" />
+    <state x="287" y="104" width="814" height="539" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1581921181021" />
     <state x="337" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1581903138129">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -196,5 +203,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="350" y="143" key="git4idea.merge.GitPullDialog/0.0.1280.680@0.0.1280.680" timestamp="1581913131407" />
+    <state x="438" y="220" key="git4idea.rebase.GitRebaseDialog" timestamp="1581914293529">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="438" y="220" key="git4idea.rebase.GitRebaseDialog/0.0.1280.680@0.0.1280.680" timestamp="1581914293529" />
   </component>
 </project>
