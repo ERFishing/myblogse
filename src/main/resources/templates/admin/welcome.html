@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- META DATA -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" th:href="@{/css/font-awesome.min.css}"/>
+    <!-- Main Style -->
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style2.css}">
+    <!-- Responsive -->
+    <link rel="stylesheet" type="text/css" th:href="@{/css/responsive.css}">
+    <!-- PrettyPhoto -->
+    <link rel="stylesheet" type="text/css" th:href="@{/css/prettyPhoto.css}">
+    <!-- Fancybox -->
+    <link th:href="@{/css/jquery.fancybox.css}" rel="stylesheet" type="text/css" media="screen">
+    <link rel="stylesheet" th:href="@{/css/login.css}"/>
+    <link rel="stylesheet" th:href="@{/css/toastr.css}"/>
+    <link rel="stylesheet" th:href="@{/css/my.css}"/>
+
+    <style>
+        .toast-message {
+            text-align: left !important;
+        }
+    </style>
+</head>
+
+<body class="index page-index">
+<!-- 加载层 -->
+<div class="loader_pig">
+    <div class="loadping">
+
+    </div>
+    <div class="loader"></div>
+</div>
+<div id="site-holder">
+    <div id="flip" class="container" data-attr-page="0">
+        <!-- ================================= 欢迎页  =================================  -->
+        <div class="f-page yellow-bkg active" id="screen-welcome">
+            <div id="debugger">
+            </div>
+            <!-- PRELOADER -->
+            <div id="content-loader-holder">
+                <div id="content-loader">
+                    <div class="ss-preloader-spin">
+                    </div>
+                </div>
+            </div>
+            <!-- END PRELOADER -->
+            <div class="g-screen fixed-screen">
+                <!-- START HEADER -->
+                <header class="site-header yellow">
+							<span class="nav-trigger">
+								<span class="nav-trigger-inside">
+									<span class="nav-trigger-line"></span>
+								</span>
+							</span>
+                    <!-- START NAVIGATION MENU -->
+                    <nav class="site-menu">
+                        <a th:href="@{admin/index}">进入博客园</a>
+                        <a th:href="@{admin/login}">登录</a>
+                        <a th:href="@{admin/register}">注册</a>
+                    </nav>
+                    <!-- END NAVIGATION MENU -->
+                    <!-- START SOCIAL ICON -->
+                    <nav class="social-bar">
+                        <a href="#" title="github">
+                            <img th:src="@{/images/github.png}" style="width: 30px; height: 30px;"/>
+                        </a>
+                    </nav>
+                    <!-- END SOCIAL ICON -->
+                </header>
+                <!-- END HEADER -->
+                <!-- START LOGO -->
+                <div class="main-logo">
+                    <div class="main-logo-shadow">
+                    </div>
+                    <div class="logo-img">
+                    </div>
+                    <a href="#about"><span class="logo-arrow"></span></a>
+                </div>
+                <!-- END LOGO -->
+                <div class="main-quote">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form th:action="@{/}" id="url" style="display: none;"></form>
+</div>
+
+<script type="text/javascript" th:src="@{/js/jquery-1.9.0.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/jquery.cookie.js}"></script>
+<script type="text/javascript" th:src="@{/js/mobicom.custom.js}"></script>
+<script type="text/javascript" th:src="@{/js/main.js}"></script>
+<script type="text/javascript" th:src="@{/js/jquery.spritely-0.6.8.js}"></script>
+<script th:src="@{/js/jquery.fancybox.pack.js}" type="text/javascript"></script>
+<script th:src="@{/js/login.js}"></script>
+<script th:src="@{/js/toastr.min.js}"></script>
+</body>
+
+</html>
