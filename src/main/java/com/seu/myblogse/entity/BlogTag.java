@@ -1,7 +1,5 @@
 package com.seu.myblogse.entity;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-
 import java.util.Date;
 
 public class BlogTag {
@@ -11,7 +9,6 @@ public class BlogTag {
 
     private Byte isDeleted;
 
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date createTime;
 
     public Integer getTagId() {

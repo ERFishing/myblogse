@@ -2,21 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="986f7f92-75e9-4c8a-af2e-ed22b68caca3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/controller/admin/CategoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/mapper/BlogCategoryMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/mapper/BlogMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/service/CategoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/service/impl/CategoryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/BlogCategoryMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/BlogMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatisGeneratorConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/controller/admin/TagController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/mapper/BlogTagMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/mapper/BlogTagRelationMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/service/TagService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/service/impl/TagServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/BlogTagMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/BlogTagRelationMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/controller/admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/controller/admin/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/entity/BlogCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/entity/BlogCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/util/ResultGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/util/ResultGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/myblogse/controller/admin/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/myblogse/controller/admin/AdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/myblogse/entity/BlogCategory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/myblogse/entity/BlogCategory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/entity/BlogTag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/entity/BlogTag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/service/AdminUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/service/AdminUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatisGeneratorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatisGeneratorConfig.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +139,7 @@
       <workItem from="1581926198714" duration="8148000" />
       <workItem from="1582113742506" duration="1216000" />
       <workItem from="1582205781368" duration="1276000" />
-      <workItem from="1582269766079" duration="5795000" />
+      <workItem from="1582269766079" duration="8752000" />
     </task>
     <task id="LOCAL-00001" summary="feat(控制层、视图层): 项目骨架、版本控制&#10;&#10;1、收集合适的前端页面，实现默认显示欢迎页面，跳转博客首页、登录页、注册页&#10;2、实现版本控制">
       <created>1581909470699</created>
@@ -179,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582206474573</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat: 实现分类模块信息编辑&#10;&#10;实现分类模块的增删改查，删改修改进行事务管理">
+      <created>1582276150172</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1582276150173</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,57 +196,58 @@
     <MESSAGE value="feat(控制层、视图层): 项目骨架、版本控制&#10;&#10;1、收集合适的前端页面，实现默认显示欢迎页面，跳转博客首页、登录页、注册页&#10;2、实现版本控制" />
     <MESSAGE value="feat: 实现注册、登录&#10;&#10;实现注册页面（尚未加锁），注册成功后跳转至登录页面" />
     <MESSAGE value="feat: 实现身份验证拦截&#10;&#10;需要验证身份后才能进入一些页面" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 实现身份验证拦截&#10;&#10;需要验证身份后才能进入一些页面" />
+    <MESSAGE value="feat: 实现分类模块信息编辑&#10;&#10;实现分类模块的增删改查，删改修改进行事务管理" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 实现分类模块信息编辑&#10;&#10;实现分类模块的增删改查，删改修改进行事务管理" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="446" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1582275250805">
+    <state x="446" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1582277205370">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1582275250805" />
+    <state x="446" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1582277205370" />
     <state x="371" y="91" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582271523190">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="91" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1582271523190" />
-    <state x="147" y="246" width="770" height="434" key="CommitChangelistDialog2" timestamp="1582206472131">
+    <state x="147" y="246" width="770" height="434" key="CommitChangelistDialog2" timestamp="1582276147065">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="147" y="246" width="770" height="434" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1582206472131" />
+    <state x="147" y="246" width="770" height="434" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1582276147065" />
     <state x="421" y="99" key="FileChooserDialogImpl" timestamp="1581922395347">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="99" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1581922395347" />
-    <state width="1237" height="243" key="GridCell.Tab.0.bottom" timestamp="1582276034188">
+    <state width="1237" height="183" key="GridCell.Tab.0.bottom" timestamp="1582278877378">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="243" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582276034188" />
-    <state width="1237" height="243" key="GridCell.Tab.0.center" timestamp="1582276034188">
+    <state width="1237" height="183" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582278877378" />
+    <state width="1237" height="183" key="GridCell.Tab.0.center" timestamp="1582278877378">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="243" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1582276034188" />
-    <state width="1237" height="243" key="GridCell.Tab.0.left" timestamp="1582276034187">
+    <state width="1237" height="183" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1582278877378" />
+    <state width="1237" height="183" key="GridCell.Tab.0.left" timestamp="1582278877377">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="243" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1582276034187" />
-    <state width="1237" height="243" key="GridCell.Tab.0.right" timestamp="1582276034188">
+    <state width="1237" height="183" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1582278877377" />
+    <state width="1237" height="183" key="GridCell.Tab.0.right" timestamp="1582278877378">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="243" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1582276034188" />
-    <state width="1237" height="243" key="GridCell.Tab.1.bottom" timestamp="1582276034188">
+    <state width="1237" height="183" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1582278877378" />
+    <state width="1237" height="183" key="GridCell.Tab.1.bottom" timestamp="1582278877378">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="243" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582276034188" />
-    <state width="1237" height="243" key="GridCell.Tab.1.center" timestamp="1582276034188">
+    <state width="1237" height="183" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582278877378" />
+    <state width="1237" height="183" key="GridCell.Tab.1.center" timestamp="1582278877378">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="243" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1582276034188" />
-    <state width="1237" height="243" key="GridCell.Tab.1.left" timestamp="1582276034188">
+    <state width="1237" height="183" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1582278877378" />
+    <state width="1237" height="183" key="GridCell.Tab.1.left" timestamp="1582278877378">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="243" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1582276034188" />
-    <state width="1237" height="243" key="GridCell.Tab.1.right" timestamp="1582276034188">
+    <state width="1237" height="183" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1582278877378" />
+    <state width="1237" height="183" key="GridCell.Tab.1.right" timestamp="1582278877378">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="243" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1582276034188" />
+    <state width="1237" height="183" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1582278877378" />
     <state x="171" y="0" key="Maven.ArtifactSearchDialog" timestamp="1581839120359">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

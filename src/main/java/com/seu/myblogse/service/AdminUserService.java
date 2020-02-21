@@ -3,7 +3,7 @@ package com.seu.myblogse.service;
 import com.seu.myblogse.entity.AdminUser;
 import org.apache.ibatis.annotations.Mapper;
 
-@Mapper
+//@Mapper
 public interface AdminUserService {
     /**
      * 用户登录
