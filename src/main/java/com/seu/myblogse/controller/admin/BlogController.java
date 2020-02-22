@@ -22,7 +22,11 @@ public class BlogController {
 
     @Resource
     private CategoryService categoryService;
-
+    /**
+     * 实现博客页面分页管理
+     * @param params
+     * @return
+     */
     @GetMapping("/blogs/list")
     @ResponseBody
     public Result list(@RequestParam Map<String, Object> params) {
@@ -179,6 +183,24 @@ public class BlogController {
             return ResultGenerator.getSuccessResult("修改成功");
         } else {
             return ResultGenerator.getFailResult(updateBlogResult);
+        }
+    }
+
+    /**
+     * 文章删除
+     * @param ids
+     * @return
+     */
+    @PostMapping("/blogs/delete")
+    @ResponseBody
+    public Result delete(@RequestBody Integer[] ids) {
+        if (ids.length < 1) {
+            return ResultGenerator.getFailResult("参数异常！");
+        }
+        if (blogService.deleteBatch(ids)) {
+            return ResultGenerator.getSuccessResult();
+        } else {
+            return ResultGenerator.getFailResult("删除失败");
         }
     }
 }
