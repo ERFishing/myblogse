@@ -25,4 +25,6 @@ public interface BlogCategoryMapper {
     int updateByPrimaryKey(BlogCategory record);
 
     int deleteBatch(Integer[] ids);
+
+    List<BlogCategory> selectByCategoryIds(List<Integer> categoryIds);
 }
