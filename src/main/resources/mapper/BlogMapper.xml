@@ -315,4 +315,5 @@
         </foreach>
         and is_deleted =0
     </update>
+
 </mapper>

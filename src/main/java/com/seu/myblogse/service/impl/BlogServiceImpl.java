@@ -13,9 +13,7 @@ import com.seu.myblogse.util.PatternUtil;
 import com.seu.myblogse.vo.BlogDetailVO;
 import com.seu.myblogse.vo.BlogListVO;
 import com.seu.myblogse.vo.SimpleBlogListVO;
-import org.hibernate.validator.constraints.pl.REGON;
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
@@ -200,6 +198,11 @@ public class BlogServiceImpl implements BlogService {
         return pageResult;
     }
 
+    /**
+     * 首页侧边栏数据
+     * @param type
+     * @return
+     */
     @Override
     public List<SimpleBlogListVO> getBlogListForIndexPage(int type) {
         List<SimpleBlogListVO> simpleBlogListVOS = new ArrayList<>();
@@ -224,7 +227,12 @@ public class BlogServiceImpl implements BlogService {
         }
         return null;
     }
-
+    /**
+     * 根据标签获取首页文章列表
+     *
+     * @param page
+     * @return
+     */
     @Override
     public PageResult getBlogsPageByTag(String tagName, int page) {
         if (PatternUtil.validKeyword(tagName)) {
@@ -244,7 +252,12 @@ public class BlogServiceImpl implements BlogService {
         }
         return null;
     }
-
+    /**
+     * 根据分类获取首页文章列表
+     *
+     * @param page
+     * @return
+     */
     @Override
     public PageResult getBlogsPageByCategory(String categoryName, int page) {
         if (PatternUtil.validKeyword(categoryName)) {
@@ -270,6 +283,12 @@ public class BlogServiceImpl implements BlogService {
         return null;
     }
 
+    /**
+     * 根据关键字获取首页文章列表
+     * @param keyword
+     * @param page
+     * @return
+     */
     @Override
     public PageResult getBlogsPageBySearch(String keyword, int page) {
         if (page > 0 && PatternUtil.validKeyword(keyword)) {

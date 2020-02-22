@@ -2,6 +2,7 @@ package com.seu.myblogse.mapper;
 
 import com.seu.myblogse.entity.BlogCategory;
 import com.seu.myblogse.util.PageQueryUtil;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -26,5 +27,6 @@ public interface BlogCategoryMapper {
 
     int deleteBatch(Integer[] ids);
 
-    List<BlogCategory> selectByCategoryIds(List<Integer> categoryIds);
+    List<BlogCategory> selectByCategoryIds(@Param("categoryIds") List<Integer> categoryIds);
+
 }

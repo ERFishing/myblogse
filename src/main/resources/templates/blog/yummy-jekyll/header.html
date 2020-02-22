@@ -35,9 +35,11 @@
             <span class="octicon octicon-rocket" th:text="| ${configurations.get('websiteName')}|"></span>
         </a>
         <nav class="site-header-nav" role="navigation">
-            <a th:href="@{/index}" class=" site-header-nav-item hvr-underline-from-center">
-                Home
-            </a>
+                <!--                            <a th:href="@{/index}">主页</a>-->
+                <a th:href="@{admin/login}" th:if="${!flag}" class=" site-header-nav-item hvr-underline-from-center">Login</a>
+<!--            <a th:href="@{/index}" class=" site-header-nav-item hvr-underline-from-center">-->
+<!--                Home-->
+<!--            </a>-->
             <a th:href="@{/categories}" class=" site-header-nav-item hvr-underline-from-center">
                 Categories
             </a>
@@ -47,7 +49,7 @@
             <a th:href="@{/about}" class=" site-header-nav-item hvr-underline-from-center">
                 About
             </a>
-            <a href="https://github.com/ZHENFENG13" class=" site-header-nav-item hvr-underline-from-center" target="_blank">
+            <a href="https://github.com/ERFishing" class=" site-header-nav-item hvr-underline-from-center" target="_blank">
                 GitHub
             </a>
         </nav>

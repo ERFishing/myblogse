@@ -26,6 +26,7 @@ public class AdminUserServiceImpl implements AdminUserService {
         adminUser.setLoginUserName(userName);
         adminUser.setLoginPassword(passwordMd5);
         adminUser.setNickName(nickName);
+        adminUser.setLocked((byte) 0);
         adminMapper.insert(adminUser);
     }
 }
