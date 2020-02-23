@@ -1,15 +1,20 @@
 package com.seu.myblogse.controller.blog;
 
+import com.seu.myblogse.entity.BlogComment;
+import com.seu.myblogse.entity.BlogLink;
 import com.seu.myblogse.service.*;
 import com.seu.myblogse.service.ConfigService;
-import com.seu.myblogse.util.PageResult;
+import com.seu.myblogse.util.*;
+import com.seu.myblogse.vo.BlogDetailVO;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping
@@ -23,8 +28,8 @@ public class MyBlogController {
     private TagService tagService;
     @Resource
     private LinkService linkService;
-//    @Resource
-//    private CommentService commentService;
+    @Resource
+    private CommentService commentService;
     @Resource
     private ConfigService configService;
     @Resource
@@ -37,8 +42,6 @@ public class MyBlogController {
      */
     @GetMapping({"/", "/index", "index.html"})
     public String index(HttpServletRequest request) {
-        // 从Session中获取用户信息，判断是否为空
-        request.setAttribute("flag", null == request.getSession().getAttribute("loginUser"));
         return this.page(request, 1);
     }
     /**
@@ -61,13 +64,43 @@ public class MyBlogController {
         return "blog/" + theme + "/index";
     }
     /**
+     * Categories页面(包括分类数据和标签数据)
+     *
+     * @return
+     */
+    @GetMapping({"/categories"})
+    public String categories(HttpServletRequest request) {
+        request.setAttribute("hotTags", tagService.getBlogTagCountForIndex());
+        request.setAttribute("categories", categoryService.getAllCategories());
+        request.setAttribute("pageName", "分类页面");
+        request.setAttribute("configurations", configService.getAllConfigs());
+        return "blog/" + theme + "/category";
+    }
+
+    /**
+     * 详情页
+     *
+     * @return
+     */
+    @GetMapping({"/blog/{blogId}", "/article/{blogId}"})
+    public String detail(HttpServletRequest request, @PathVariable("blogId") Long blogId, @RequestParam(value = "commentPage", required = false, defaultValue = "1") Integer commentPage) {
+        BlogDetailVO blogDetailVO = blogService.getBlogDetail(blogId);
+        if (blogDetailVO != null) {
+            request.setAttribute("blogDetailVO", blogDetailVO);
+            request.setAttribute("commentPageResult", commentService.getCommentPageByBlogIdAndPageNum(blogId, commentPage));
+        }
+        request.setAttribute("pageName", "详情");
+        request.setAttribute("configurations", configService.getAllConfigs());
+        return "blog/" + theme + "/detail";
+    }
+
+    /**
      * 搜索列表页
      *
      * @return
      */
     @GetMapping({"/search/{keyword}"})
     public String search(HttpServletRequest request, @PathVariable("keyword") String keyword) {
-        request.setAttribute("flag", null == request.getSession().getAttribute("loginUser"));
         return search(request, keyword, 1);
     }
 
@@ -96,7 +129,6 @@ public class MyBlogController {
      */
     @GetMapping({"/category/{categoryName}"})
     public String category(HttpServletRequest request, @PathVariable("categoryName") String categoryName) {
-        request.setAttribute("flag", null == request.getSession().getAttribute("loginUser"));
         return category(request, categoryName, 1);
     }
 
@@ -146,5 +178,98 @@ public class MyBlogController {
         request.setAttribute("hotTags", tagService.getBlogTagCountForIndex());
         request.setAttribute("configurations", configService.getAllConfigs());
         return "blog/" + theme + "/list";
+    }
+    /**
+     * 友情链接页
+     *
+     * @return
+     */
+    @GetMapping({"/link"})
+    public String link(HttpServletRequest request) {
+        request.setAttribute("pageName", "友情链接");
+        Map<Byte, List<BlogLink>> linkMap = linkService.getLinksForLinkPage();
+        if (linkMap != null) {
+            //判断友链类别并封装数据 0-友链 1-推荐 2-个人网站
+            if (linkMap.containsKey((byte) 0)) {
+                request.setAttribute("favoriteLinks", linkMap.get((byte) 0));
+            }
+            if (linkMap.containsKey((byte) 1)) {
+                request.setAttribute("recommendLinks", linkMap.get((byte) 1));
+            }
+            if (linkMap.containsKey((byte) 2)) {
+                request.setAttribute("personalLinks", linkMap.get((byte) 2));
+            }
+        }
+        request.setAttribute("configurations", configService.getAllConfigs());
+        return "blog/" + theme + "/link";
+    }
+
+    /**
+     * 评论操作
+     */
+    @PostMapping(value = "/blog/comment")
+    @ResponseBody
+    public Result comment(HttpServletRequest request, HttpSession session,
+                          @RequestParam Long blogId, @RequestParam String verifyCode,
+                          @RequestParam String commentator, @RequestParam String email,
+                          @RequestParam String websiteUrl, @RequestParam String commentBody) {
+        if (StringUtils.isEmpty(verifyCode)) {
+            return ResultGenerator.getFailResult("验证码不能为空");
+        }
+        String kaptchaCode = session.getAttribute("verifyCode") + "";
+        if (StringUtils.isEmpty(kaptchaCode)) {
+            return ResultGenerator.getFailResult("非法请求");
+        }
+        if (!verifyCode.equals(kaptchaCode)) {
+            return ResultGenerator.getFailResult("验证码错误");
+        }
+        String ref = request.getHeader("Referer");
+        if (StringUtils.isEmpty(ref)) {
+            return ResultGenerator.getFailResult("非法请求");
+        }
+        if (null == blogId || blogId < 0) {
+            return ResultGenerator.getFailResult("非法请求");
+        }
+        if (StringUtils.isEmpty(commentator)) {
+            return ResultGenerator.getFailResult("请输入称呼");
+        }
+        if (StringUtils.isEmpty(email)) {
+            return ResultGenerator.getFailResult("请输入邮箱地址");
+        }
+        if (!PatternUtil.isEmail(email)) {
+            return ResultGenerator.getFailResult("请输入正确的邮箱地址");
+        }
+        if (StringUtils.isEmpty(commentBody)) {
+            return ResultGenerator.getFailResult("请输入评论内容");
+        }
+        if (commentBody.trim().length() > 200) {
+            return ResultGenerator.getFailResult("评论内容过长");
+        }
+        BlogComment comment = new BlogComment();
+        comment.setBlogId(blogId);
+        comment.setCommentator(MyBlogUtils.cleanString(commentator));
+        comment.setEmail(email);
+        if (PatternUtil.isURL(websiteUrl)) {
+            comment.setWebsiteUrl(websiteUrl);
+        }
+        comment.setCommentBody(MyBlogUtils.cleanString(commentBody));
+        return ResultGenerator.getSuccessResult(commentService.addComment(comment));
+    }
+    /**
+     * 关于页面 以及其他配置了subUrl的文章页
+     *
+     * @return
+     */
+    @GetMapping({"/{subUrl}"})
+    public String detail(HttpServletRequest request, @PathVariable("subUrl") String subUrl) {
+        BlogDetailVO blogDetailVO = blogService.getBlogDetailBySubUrl(subUrl);
+        if (blogDetailVO != null) {
+            request.setAttribute("blogDetailVO", blogDetailVO);
+            request.setAttribute("pageName", subUrl);
+            request.setAttribute("configurations", configService.getAllConfigs());
+            return "blog/" + theme + "/detail";
+        } else {
+            return "error/error_400";
+        }
     }
 }
