@@ -1,7 +1,8 @@
 package com.seu.myblogse.controller.admin;
 
 import com.seu.myblogse.entity.AdminUser;
-import com.seu.myblogse.service.AdminUserService;
+import com.seu.myblogse.service.*;
+import org.hibernate.validator.constraints.pl.REGON;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
@@ -18,8 +19,34 @@ public class AdminController {
     //public static String theme = "yummy-jekyll";
     public static String theme = "amaze";
     @Resource
+    private CategoryService categoryService;
+    @Resource
+    private BlogService blogService;
+    @Resource
+    private LinkService linkService;
+    @Resource
+    private TagService tagService;
+    @Resource
+    private CommentService commentService;
+    @Resource
     private AdminUserService adminUserService;
 
+    /**
+     * 登录后，点击dashboard能够有页面展示
+     * @param request
+     * @return
+     */
+    @GetMapping({"", "/", "/index", "/index.html"})
+    public String index(HttpServletRequest request) {
+        request.setAttribute("path", "index");
+        request.setAttribute("categoryCount", categoryService.getTotalCategories());
+        request.setAttribute("blogCount", blogService.getTotalBlogs());
+        request.setAttribute("linkCount", linkService.getTotalLinks());
+        request.setAttribute("tagCount", tagService.getTotalTags());
+        request.setAttribute("commentCount", commentService.getTotalComments());
+        request.setAttribute("path", "index");
+        return "admin/index";
+    }
     @GetMapping({"/login"})
     public String login() {
         return "admin/login";
