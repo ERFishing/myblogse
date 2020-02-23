@@ -2,8 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="986f7f92-75e9-4c8a-af2e-ed22b68caca3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/config/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/controller/admin/UploadController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/controller/admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/controller/admin/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/jquery.fancybox.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/maps/style.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/my.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/myInfo/bootstrap-responsive.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/myInfo/bootstrap-responsive.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/myInfo/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/myInfo/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/myInfo/demo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/myInfo/jqbar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/myInfo/jquery.fancybox.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/myInfo/simpletextrotator.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/myInfo/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/prettyPhoto.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/responsive.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/style2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/toastr.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/images/arrow_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/images/cursor.cur" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/images/github.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/images/trigger.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/images/welcome_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/jquery-1.9.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/jquery.cookie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/jquery.fancybox.pack.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/jquery.spritely-0.6.8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/mobicom.custom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/toastr.min.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +111,7 @@
       <recent name="F:\JavaDevelop_Update\JavaProject\myblogse\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.seu.myblogse.config" />
       <recent name="com.seu.myblogse.controller.admin" />
       <recent name="com.seu.myblogse.service.impl" />
       <recent name="com.seu.myblogse.service" />
@@ -138,7 +173,7 @@
       <workItem from="1582205781368" duration="1276000" />
       <workItem from="1582269766079" duration="8892000" />
       <workItem from="1582349992680" duration="16707000" />
-      <workItem from="1582439044954" duration="5153000" />
+      <workItem from="1582439044954" duration="6125000" />
     </task>
     <task id="LOCAL-00001" summary="feat(控制层、视图层): 项目骨架、版本控制&#10;&#10;1、收集合适的前端页面，实现默认显示欢迎页面，跳转博客首页、登录页、注册页&#10;2、实现版本控制">
       <created>1581909470699</created>
@@ -245,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582443803729</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="feat: 更新Dashboard点击后页面">
+      <created>1582444289505</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1582444289505</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,7 +310,8 @@
     <MESSAGE value="feat: 定制错误页面" />
     <MESSAGE value="feat: 完成评论模块" />
     <MESSAGE value="feat: 完成个人信息修改模块，退出登录模块" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 完成个人信息修改模块，退出登录模块" />
+    <MESSAGE value="feat: 更新Dashboard点击后页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 更新Dashboard点击后页面" />
   </component>
   <component name="WindowStateProjectService">
     <state x="446" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1582441162095">
@@ -279,46 +322,46 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="91" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1582271523190" />
-    <state x="147" y="246" width="770" height="434" key="CommitChangelistDialog2" timestamp="1582443800997">
+    <state x="147" y="246" width="770" height="434" key="CommitChangelistDialog2" timestamp="1582444287095">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="147" y="246" width="770" height="434" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1582443800997" />
+    <state x="147" y="246" width="770" height="434" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1582444287095" />
     <state x="421" y="99" key="FileChooserDialogImpl" timestamp="1581922395347">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="99" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1581922395347" />
-    <state width="1237" height="82" key="GridCell.Tab.0.bottom" timestamp="1582444225203">
+    <state width="1237" height="32" key="GridCell.Tab.0.bottom" timestamp="1582445057444">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="82" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582444225203" />
-    <state width="1237" height="82" key="GridCell.Tab.0.center" timestamp="1582444225203">
+    <state width="1237" height="32" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582445057444" />
+    <state width="1237" height="32" key="GridCell.Tab.0.center" timestamp="1582445057444">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="82" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1582444225203" />
-    <state width="1237" height="82" key="GridCell.Tab.0.left" timestamp="1582444225203">
+    <state width="1237" height="32" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1582445057444" />
+    <state width="1237" height="32" key="GridCell.Tab.0.left" timestamp="1582445057444">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="82" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1582444225203" />
-    <state width="1237" height="82" key="GridCell.Tab.0.right" timestamp="1582444225203">
+    <state width="1237" height="32" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1582445057444" />
+    <state width="1237" height="32" key="GridCell.Tab.0.right" timestamp="1582445057444">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="82" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1582444225203" />
-    <state width="1237" height="82" key="GridCell.Tab.1.bottom" timestamp="1582444225203">
+    <state width="1237" height="32" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1582445057444" />
+    <state width="1237" height="32" key="GridCell.Tab.1.bottom" timestamp="1582445057444">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="82" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582444225203" />
-    <state width="1237" height="82" key="GridCell.Tab.1.center" timestamp="1582444225203">
+    <state width="1237" height="32" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582445057444" />
+    <state width="1237" height="32" key="GridCell.Tab.1.center" timestamp="1582445057444">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="82" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1582444225203" />
-    <state width="1237" height="82" key="GridCell.Tab.1.left" timestamp="1582444225203">
+    <state width="1237" height="32" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1582445057444" />
+    <state width="1237" height="32" key="GridCell.Tab.1.left" timestamp="1582445057444">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="82" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1582444225203" />
-    <state width="1237" height="82" key="GridCell.Tab.1.right" timestamp="1582444225203">
+    <state width="1237" height="32" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1582445057444" />
+    <state width="1237" height="32" key="GridCell.Tab.1.right" timestamp="1582445057444">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="82" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1582444225203" />
+    <state width="1237" height="32" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1582445057444" />
     <state width="1237" height="44" key="GridCell.Tab.2.bottom" timestamp="1582443124820">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
