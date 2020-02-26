@@ -7,22 +7,23 @@
         <result column="login_password" jdbcType="VARCHAR" property="loginPassword" />
         <result column="nick_name" jdbcType="VARCHAR" property="nickName" />
         <result column="locked" jdbcType="TINYINT" property="locked" />
+        <result column="salt" jdbcType="VARCHAR" property="salt" />
     </resultMap>
     <sql id="Base_Column_List">
-    admin_user_id, login_user_name, login_password, nick_name, locked
+    admin_user_id, login_user_name, login_password, nick_name, locked, salt
    </sql>
 
     <select id="login" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List" />
         from tb_admin_user
-        where login_user_name = #{userName,jdbcType=VARCHAR} AND login_password=#{password,jdbcType=VARCHAR} AND locked = 0
+        where login_user_name = #{userName,jdbcType=VARCHAR}
     </select>
 
     <insert id="insert" parameterType="com.seu.myblogse.entity.AdminUser">
-       insert into tb_admin_user (login_user_name, login_password,nick_name, locked)
+       insert into tb_admin_user (login_user_name, login_password,nick_name, locked, salt )
        values ( #{loginUserName,jdbcType=VARCHAR}, #{loginPassword,jdbcType=VARCHAR},
-      #{nickName,jdbcType=VARCHAR}, #{locked,jdbcType=TINYINT})
+      #{nickName,jdbcType=VARCHAR}, #{locked,jdbcType=TINYINT}, #{salt,jdbcType=VARCHAR})
     </insert>
     <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
         select

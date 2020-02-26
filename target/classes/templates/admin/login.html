@@ -27,6 +27,27 @@
             z-index: -1;
         }
     </style>
+    <script type="text/javascript">
+        $(function(){
+            function formEncryption(password){//md5加密
+                var salt="erfish";
+                var str=salt.charAt(5)+salt.charAt(2)+password+salt.charAt(0);//使用固定的salt
+                return md5(str);
+            }
+            $("#submit").click(function(){
+                $.ajax({
+                    url:"admin/login",
+                    type:"post",
+                    data:{
+                        "password":formEncryption($(".password").val)
+                    },
+                    success:function(){
+
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 <body class="hold-transition login-page">
 <div id="particles">
@@ -67,7 +88,7 @@
                     <div class="col-8">
                     </div>
                     <div class="col-4">
-                        <button type="submit" class="btn btn-primary btn-block btn-flat">登录
+                        <button type="submit" id="submit" class="btn btn-primary btn-block btn-flat">登录
                         </button>
                     </div>
                 </div>
@@ -85,5 +106,8 @@
 <script th:src="@{/admin/plugins/bootstrap/js/bootstrap.bundle.min.js}"></script>
 <script th:src="@{/admin/dist/js/plugins/particles.js}"></script>
 <script th:src="@{/admin/dist/js/plugins/login-bg-particles.js}"></script>
+<script th:src="@{/admin/plugins/MD5/js/md5.js}"></script>
+
+
 </body>
 </html>

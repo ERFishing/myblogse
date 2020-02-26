@@ -2,11 +2,14 @@ package com.seu.myblogse.controller.admin;
 
 import com.seu.myblogse.entity.AdminUser;
 import com.seu.myblogse.service.*;
-import org.hibernate.validator.constraints.pl.REGON;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.seu.myblogse.util.MD5Util;
+import com.seu.myblogse.util.Result;
+import com.seu.myblogse.util.ResultGenerator;
+import com.seu.myblogse.vo.RegisterUserVO;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
+
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -72,10 +75,17 @@ public class AdminController {
 //        }
         AdminUser adminUser = adminUserService.login(userName, password);
         if (adminUser != null) {
+            //判断登录密码
+            String passwordDB=MD5Util.dbEncryption(password,adminUser.getSalt());
+            if(!passwordDB.equals(adminUser.getLoginPassword())){
+                //密码不一致，需要重新登录
+                session.setAttribute("errorMsg", "登陆失败");
+                return "admin/login";
+            }
             session.setAttribute("loginUser", adminUser.getNickName());
             session.setAttribute("loginUserId", adminUser.getAdminUserId());
             //session过期时间设置为7200秒 即两小时
-            //session.setMaxInactiveInterval(60 * 60 * 2);
+            session.setMaxInactiveInterval(60 * 60 * 2);
             return "admin/index";
         } else {
             session.setAttribute("errorMsg", "登陆失败");
@@ -88,33 +98,36 @@ public class AdminController {
     }
 
     @PostMapping(value = "/register")
+//    @ResponseBody
     public String register(@RequestParam("userName") String userName,
-                        @RequestParam("password") String password,
-                        @RequestParam("nickname") String nickName,
-                        @RequestParam("verifyCode") String verifyCode,
-                        HttpSession session) {
+                           @RequestParam("password") String password,
+                           @RequestParam("nickname") String nickName,
+                           @RequestParam("verifyCode") String verifyCode,
+                           HttpSession session) {
         if (StringUtils.isEmpty(verifyCode)) {
             session.setAttribute("errorMsg", "验证码不能为空");
-            return "admin/login";
+            return "admin/register";
         }
         if (StringUtils.isEmpty(userName) || StringUtils.isEmpty(password)) {
-            session.setAttribute("errorMsg", "用户名或密码不能为空");
-            return "admin/login";
+            session.setAttribute("errorMsg",  "用户名或密码不能为空" );
+            return "admin/register";
         }
         if(StringUtils.isEmpty(nickName)){
-            session.setAttribute("errorMsg", "昵称不能为空");
-            return "admin/login";
+            session.setAttribute("errorMsg",  "昵称不能为空");
+            return "admin/register";
         }
 //        String kaptchaCode = session.getAttribute("verifyCode") + "";
 //        if (StringUtils.isEmpty(kaptchaCode) || !verifyCode.equals(kaptchaCode)) {
 //            session.setAttribute("errorMsg", "验证码错误");
 //            return "admin/register";
 //        }
-        //这里插入数据，应当加锁
+        if(adminUserService.login(userName, password)!=null){
+            session.setAttribute("errorMsg",  "用户名重复");
+            return "admin/register";
+        }
         //注册成功
         adminUserService.register(userName, password,nickName);
-        //重定向到登录页面
-        return "redirect:/admin/login";
+        return "admin/login";
 
     }
 
@@ -170,7 +183,6 @@ public class AdminController {
         request.getSession().removeAttribute("loginUserId");
         request.getSession().removeAttribute("loginUser");
         request.getSession().removeAttribute("errorMsg");
-//        return "redirect:/blog/" + theme + "/index";
         return "redirect:/index";
     }
 }

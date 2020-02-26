@@ -2,42 +2,67 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="986f7f92-75e9-4c8a-af2e-ed22b68caca3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/config/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/controller/admin/UploadController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/config/HttpConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/vo/RegisterUserVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/css/toastr.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/js/plugins/toastr.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/plugins/MD5/css/demo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/plugins/MD5/js/demo/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/plugins/MD5/js/md5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/plugins/MD5/js/md5.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/plugins/MD5/js/md5.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tomcat.key" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/jquery.fancybox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/maps/style.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/my.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/myInfo/bootstrap-responsive.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/myInfo/bootstrap-responsive.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/myInfo/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/myInfo/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/myInfo/demo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/myInfo/jqbar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/myInfo/jquery.fancybox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/myInfo/simpletextrotator.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/myInfo/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/prettyPhoto.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/responsive.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/style2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/toastr.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/images/arrow_right.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/images/cursor.cur" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/images/github.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/images/trigger.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/images/welcome_logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/jquery-1.9.0.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/jquery.cookie.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/jquery.fancybox.pack.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/jquery.spritely-0.6.8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/mobicom.custom.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/js/toastr.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_blog_db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/my_blog_db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myblogse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/myblogse.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/controller/admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/controller/admin/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/entity/AdminUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/entity/AdminUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/mapper/AdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/mapper/AdminMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/service/impl/AdminUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/service/impl/AdminUserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/util/MD5Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/seu/myblogse/util/MD5Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/AdminMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/AdminMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/myblogse/controller/admin/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/myblogse/controller/admin/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/myblogse/entity/AdminUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/myblogse/entity/AdminUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/seu/myblogse/mapper/AdminMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/seu/myblogse/mapper/AdminMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/css/jquery.fancybox.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/css/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/css/maps/style.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/css/my.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/css/myInfo/bootstrap-responsive.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/css/myInfo/bootstrap-responsive.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/css/myInfo/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/css/myInfo/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/css/myInfo/demo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/css/myInfo/jqbar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/css/myInfo/jquery.fancybox.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/css/myInfo/simpletextrotator.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/css/myInfo/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/css/prettyPhoto.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/css/responsive.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/css/style2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/css/toastr.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/images/arrow_right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/images/cursor.cur" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/images/github.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/images/trigger.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/images/welcome_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/js/jquery-1.9.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/js/jquery.cookie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/js/jquery.fancybox.pack.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/js/jquery.spritely-0.6.8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/js/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/js/mobicom.custom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/js/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/js/toastr.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +72,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -93,7 +118,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/seu/myblogse/controller" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -104,18 +129,18 @@
       <recent name="F:\JavaDevelop_Update\JavaProject\myblogse\src\main\resources\public" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\JavaDevelop_Update\JavaProject\myblogse" />
+      <recent name="F:\JavaDevelop_Update\JavaProject\myblogse\src\main\resources\static\admin\dist\css" />
+      <recent name="F:\JavaDevelop_Update\JavaProject\myblogse\src\main\resources\static\admin\dist\js\plugins" />
+      <recent name="F:\JavaDevelop_Update\JavaProject\myblogse\src\main\resources\static\admin\plugins" />
       <recent name="F:\JavaDevelop_Update\JavaProject\myblogse\src\main\java\com\seu\myblogse\controller" />
-      <recent name="F:\JavaDevelop_Update\JavaProject\myblogse\src\main\resources\mapper" />
-      <recent name="F:\JavaDevelop_Update\JavaProject\myblogse\src\main\java\com\seu\myblogse" />
-      <recent name="F:\JavaDevelop_Update\JavaProject\myblogse\src\main\resources\public\images" />
-      <recent name="F:\JavaDevelop_Update\JavaProject\myblogse\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.seu.myblogse.vo" />
       <recent name="com.seu.myblogse.config" />
       <recent name="com.seu.myblogse.controller.admin" />
       <recent name="com.seu.myblogse.service.impl" />
       <recent name="com.seu.myblogse.service" />
-      <recent name="com.seu.myblogse.mapper" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.seu.myblogse.mapper" />
@@ -173,7 +198,10 @@
       <workItem from="1582205781368" duration="1276000" />
       <workItem from="1582269766079" duration="8892000" />
       <workItem from="1582349992680" duration="16707000" />
-      <workItem from="1582439044954" duration="6125000" />
+      <workItem from="1582439044954" duration="6796000" />
+      <workItem from="1582527852500" duration="6217000" />
+      <workItem from="1582611932294" duration="27809000" />
+      <workItem from="1582690065240" duration="5632000" />
     </task>
     <task id="LOCAL-00001" summary="feat(控制层、视图层): 项目骨架、版本控制&#10;&#10;1、收集合适的前端页面，实现默认显示欢迎页面，跳转博客首页、登录页、注册页&#10;2、实现版本控制">
       <created>1581909470699</created>
@@ -287,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582444289505</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="feat: 上传博客封面图片，本地存储">
+      <created>1582445206632</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1582445206632</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,89 +346,94 @@
     <MESSAGE value="feat: 完成评论模块" />
     <MESSAGE value="feat: 完成个人信息修改模块，退出登录模块" />
     <MESSAGE value="feat: 更新Dashboard点击后页面" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 更新Dashboard点击后页面" />
+    <MESSAGE value="feat: 上传博客封面图片，本地存储" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 上传博客封面图片，本地存储" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="446" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1582441162095">
+    <state x="446" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1582633660676">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1582441162095" />
+    <state x="446" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1582633660676" />
+    <state x="203" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1582634500518">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="203" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.680@0.0.1280.680" timestamp="1582634500518" />
     <state x="371" y="91" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582271523190">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="91" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1582271523190" />
-    <state x="147" y="246" width="770" height="434" key="CommitChangelistDialog2" timestamp="1582444287095">
+    <state x="147" y="246" width="770" height="434" key="CommitChangelistDialog2" timestamp="1582698229371">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="147" y="246" width="770" height="434" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1582444287095" />
-    <state x="421" y="99" key="FileChooserDialogImpl" timestamp="1581922395347">
+    <state x="147" y="246" width="770" height="434" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1582698229371" />
+    <state x="421" y="99" key="FileChooserDialogImpl" timestamp="1582639572910">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="99" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1581922395347" />
-    <state width="1237" height="32" key="GridCell.Tab.0.bottom" timestamp="1582445057444">
+    <state x="421" y="99" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1582639572910" />
+    <state width="1237" height="151" key="GridCell.Tab.0.bottom" timestamp="1582698151965">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="32" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582445057444" />
-    <state width="1237" height="32" key="GridCell.Tab.0.center" timestamp="1582445057444">
+    <state width="1237" height="151" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582698151965" />
+    <state width="1237" height="151" key="GridCell.Tab.0.center" timestamp="1582698151965">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="32" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1582445057444" />
-    <state width="1237" height="32" key="GridCell.Tab.0.left" timestamp="1582445057444">
+    <state width="1237" height="151" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1582698151965" />
+    <state width="1237" height="151" key="GridCell.Tab.0.left" timestamp="1582698151965">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="32" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1582445057444" />
-    <state width="1237" height="32" key="GridCell.Tab.0.right" timestamp="1582445057444">
+    <state width="1237" height="151" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1582698151965" />
+    <state width="1237" height="151" key="GridCell.Tab.0.right" timestamp="1582698151965">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="32" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1582445057444" />
-    <state width="1237" height="32" key="GridCell.Tab.1.bottom" timestamp="1582445057444">
+    <state width="1237" height="151" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1582698151965" />
+    <state width="1237" height="151" key="GridCell.Tab.1.bottom" timestamp="1582698151965">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="32" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582445057444" />
-    <state width="1237" height="32" key="GridCell.Tab.1.center" timestamp="1582445057444">
+    <state width="1237" height="151" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582698151965" />
+    <state width="1237" height="151" key="GridCell.Tab.1.center" timestamp="1582698151965">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="32" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1582445057444" />
-    <state width="1237" height="32" key="GridCell.Tab.1.left" timestamp="1582445057444">
+    <state width="1237" height="151" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1582698151965" />
+    <state width="1237" height="151" key="GridCell.Tab.1.left" timestamp="1582698151965">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="32" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1582445057444" />
-    <state width="1237" height="32" key="GridCell.Tab.1.right" timestamp="1582445057444">
+    <state width="1237" height="151" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1582698151965" />
+    <state width="1237" height="151" key="GridCell.Tab.1.right" timestamp="1582698151965">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="32" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1582445057444" />
-    <state width="1237" height="44" key="GridCell.Tab.2.bottom" timestamp="1582443124820">
+    <state width="1237" height="151" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1582698151965" />
+    <state width="1237" height="279" key="GridCell.Tab.2.bottom" timestamp="1582691668227">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="44" key="GridCell.Tab.2.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582443124820" />
-    <state width="1237" height="44" key="GridCell.Tab.2.center" timestamp="1582443124819">
+    <state width="1237" height="279" key="GridCell.Tab.2.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582691668227" />
+    <state width="1237" height="279" key="GridCell.Tab.2.center" timestamp="1582691668227">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="44" key="GridCell.Tab.2.center/0.0.1280.680@0.0.1280.680" timestamp="1582443124819" />
-    <state width="1237" height="44" key="GridCell.Tab.2.left" timestamp="1582443124819">
+    <state width="1237" height="279" key="GridCell.Tab.2.center/0.0.1280.680@0.0.1280.680" timestamp="1582691668227" />
+    <state width="1237" height="279" key="GridCell.Tab.2.left" timestamp="1582691668227">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="44" key="GridCell.Tab.2.left/0.0.1280.680@0.0.1280.680" timestamp="1582443124819" />
-    <state width="1237" height="44" key="GridCell.Tab.2.right" timestamp="1582443124819">
+    <state width="1237" height="279" key="GridCell.Tab.2.left/0.0.1280.680@0.0.1280.680" timestamp="1582691668227" />
+    <state width="1237" height="279" key="GridCell.Tab.2.right" timestamp="1582691668227">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="44" key="GridCell.Tab.2.right/0.0.1280.680@0.0.1280.680" timestamp="1582443124819" />
+    <state width="1237" height="279" key="GridCell.Tab.2.right/0.0.1280.680@0.0.1280.680" timestamp="1582691668227" />
     <state x="171" y="0" key="Maven.ArtifactSearchDialog" timestamp="1581839120359">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="171" y="0" key="Maven.ArtifactSearchDialog/0.0.1280.680@0.0.1280.680" timestamp="1581839120359" />
-    <state x="144" y="0" key="SettingsEditor" timestamp="1581903110183">
+    <state x="144" y="0" key="SettingsEditor" timestamp="1582694448694">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="144" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1581903110183" />
-    <state x="287" y="104" width="761" height="539" key="Vcs.Push.Dialog.v2" timestamp="1582439096198">
+    <state x="144" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1582694448694" />
+    <state x="287" y="104" width="761" height="539" key="Vcs.Push.Dialog.v2" timestamp="1582445218619">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="287" y="104" width="761" height="539" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1582439096198" />
-    <state x="337" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1582269859215">
+    <state x="287" y="104" width="761" height="539" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1582445218619" />
+    <state x="337" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1582611932267">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="337" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1582269859215" />
+    <state x="337" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1582611932267" />
     <state x="439" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581926767800">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -406,9 +446,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="438" y="220" key="git4idea.rebase.GitRebaseDialog/0.0.1280.680@0.0.1280.680" timestamp="1581914293529" />
-    <state x="28" y="49" key="new project wizard" timestamp="1581922405391">
+    <state x="28" y="0" key="new project wizard" timestamp="1582615763452">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="28" y="49" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1581922405391" />
+    <state x="28" y="0" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1582615763452" />
   </component>
 </project>

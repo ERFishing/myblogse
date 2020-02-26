@@ -4,30 +4,44 @@ import com.seu.myblogse.entity.AdminUser;
 import com.seu.myblogse.mapper.AdminMapper;
 import com.seu.myblogse.service.AdminUserService;
 import com.seu.myblogse.util.MD5Util;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.UUID;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 @Service
 public class AdminUserServiceImpl implements AdminUserService {
     @Resource
     private AdminMapper adminMapper;
+    // 创建一把锁
+    private static final Lock USER_REGISTER_LOCK = new ReentrantLock(true);
     @Override
     public AdminUser login(String userName, String password) {
-        String passwordMd5 = MD5Util.MD5Encode(password, "UTF-8");
-        return adminMapper.login(userName,passwordMd5);
+        return adminMapper.login(userName);
     }
 
     @Override
     public void register(String userName, String password, String nickName) {
-        String passwordMd5=MD5Util.MD5Encode(password,"UTF-8");
-        AdminUser adminUser=new AdminUser();
-        adminUser.setLoginUserName(userName);
-        adminUser.setLoginPassword(passwordMd5);
-        adminUser.setNickName(nickName);
-        adminUser.setLocked((byte) 0);
-        adminMapper.insert(adminUser);
+        //加锁，防止多线程内相同用户多次注册，使用单例模式
+        USER_REGISTER_LOCK.lock();
+        try{
+            String salt= UUID.randomUUID().toString().substring(1, 10);
+            String passwordMd5=MD5Util.dbEncryption(password,salt);
+            AdminUser adminUser=new AdminUser();
+            adminUser.setLoginUserName(userName);
+            adminUser.setLoginPassword(passwordMd5);
+            adminUser.setNickName(nickName);
+            adminUser.setLocked((byte) 0);
+            adminUser.setSalt(salt);
+            adminMapper.insert(adminUser);
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            USER_REGISTER_LOCK.unlock();
+        }
+
     }
 
     @Override
@@ -40,8 +54,8 @@ public class AdminUserServiceImpl implements AdminUserService {
         AdminUser adminUser = adminMapper.selectByPrimaryKey(loginUserId);
         //当前用户非空才可以进行更改
         if (adminUser != null) {
-            String originalPasswordMd5 = MD5Util.MD5Encode(originalPassword, "UTF-8");
-            String newPasswordMd5 = MD5Util.MD5Encode(newPassword, "UTF-8");
+            String originalPasswordMd5 = MD5Util.dbEncryption(originalPassword, adminUser.getSalt());
+            String newPasswordMd5 = MD5Util.dbEncryption(newPassword,adminUser.getSalt());
             //比较原密码是否正确
             if (originalPasswordMd5.equals(adminUser.getLoginPassword())) {
                 //设置新密码并修改

@@ -47,6 +47,7 @@ CREATE TABLE `tb_admin_user` (
   `login_password` VARCHAR(50) NOT NULL COMMENT '管理员登陆密码',
   `nick_name` VARCHAR(50) NOT NULL COMMENT '管理员显示昵称',
   `locked` TINYINT(4) DEFAULT '0' COMMENT '是否锁定 0未锁定 1已锁定无法登陆',
+  `salt`  VARCHAR(10) NOT NULL COMMENT '用于MD5加密的随机盐',
   PRIMARY KEY (`admin_user_id`)
 ) ENGINE=INNODB DEFAULT CHARSET=utf8;
 

@@ -1,6 +1,6 @@
-package com.seu.myblogse.entity;
+package com.seu.myblogse.vo;
 
-public class AdminUser {
+public class RegisterUserVO {
     private Integer adminUserId;
 
     private String loginUserName;
@@ -9,17 +9,15 @@ public class AdminUser {
 
     private String nickName;
 
-    private Byte locked;
+    private String verifyCode;
 
-    public String getSalt() {
-        return salt;
+    public String getVerifyCode() {
+        return verifyCode;
     }
 
-    public void setSalt(String salt) {
-        this.salt = salt;
+    public void setVerifyCode(String verifyCode) {
+        this.verifyCode = verifyCode;
     }
-
-    private String salt;
 
     public Integer getAdminUserId() {
         return adminUserId;
@@ -53,14 +51,6 @@ public class AdminUser {
         this.nickName = nickName == null ? null : nickName.trim();
     }
 
-    public Byte getLocked() {
-        return locked;
-    }
-
-    public void setLocked(Byte locked) {
-        this.locked = locked;
-    }
-
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -71,7 +61,6 @@ public class AdminUser {
         sb.append(", loginUserName=").append(loginUserName);
         sb.append(", loginPassword=").append(loginPassword);
         sb.append(", nickName=").append(nickName);
-        sb.append(", locked=").append(locked);
         sb.append("]");
         return sb.toString();
     }
